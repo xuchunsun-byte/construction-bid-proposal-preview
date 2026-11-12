@@ -405,3 +405,43 @@ h2 .rule {
   background: #a67732;
   color: #fffdf8;
 }
+
+/* Free sample download */
+.sample-actions {
+  margin: 1rem 0 0.75rem;
+}
+.btn-sample {
+  display: inline-block;
+  background: transparent;
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid var(--navy);
+  border-radius: 2px;
+}
+.btn-sample:hover,
+.btn-sample:focus {
+  background: var(--navy);
+  color: #fffdf8;
+}
+
+/* FAQ */
+.faq details {
+  border-bottom: 1px solid var(--line);
+  padding: 0.85rem 0;
+}
+.faq summary {
+  cursor: pointer;
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.faq details p {
+  margin: 0.55rem 0 0.15rem;
+  color: var(--muted);
+  max-width: 40rem;
+}

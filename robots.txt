@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /thanks/
+Disallow: /thanks.html
+
+Sitemap: https://xuchunsun-byte.github.io/construction-bid-proposal-preview/sitemap.xml
