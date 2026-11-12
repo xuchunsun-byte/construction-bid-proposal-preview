@@ -376,3 +376,32 @@ h2 .rule {
 .notice.cancel strong {
   color: var(--navy);
 }
+
+/* Purchase CTA */
+.notice.buy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+}
+.notice.buy p {
+  max-width: 40rem;
+}
+.btn-buy {
+  display: inline-block;
+  flex: 0 0 auto;
+  background: var(--amber);
+  color: #fffdf8;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 2px;
+}
+.btn-buy:hover,
+.btn-buy:focus {
+  background: #a67732;
+  color: #fffdf8;
+}

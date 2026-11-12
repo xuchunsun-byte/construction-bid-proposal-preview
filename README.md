@@ -1,7 +1,5 @@
-# Construction Bid Proposal Deck — preview
+# Construction Bid Proposal Deck
 
-Public preview of an 8-page sample Construction Bid Proposal Deck for small civil and construction firms preparing a bid presentation.
+Public preview of an 8-page sample, with checkout for the full 16-page editable Construction Bid Proposal Deck.
 
-Purchase and checkout are pending. This page is a preview only: it has no price, no buy button, and no payment link.
-
-Dated 12 November 2026.
+The full pack is a $19 one-time purchase. The thank-you page at `thanks/` does not include a checkout link.
