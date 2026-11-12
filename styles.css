@@ -368,3 +368,11 @@ h2 .rule {
 .notice.success strong {
   color: var(--navy);
 }
+.notice.cancel {
+  background: #f7efe6;
+  border-color: #e4d0b8;
+  color: var(--navy);
+}
+.notice.cancel strong {
+  color: var(--navy);
+}

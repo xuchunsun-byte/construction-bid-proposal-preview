@@ -9,31 +9,63 @@
 </head>
 <body>
   <div class="page">
-    <header class="masthead">
-      <div class="masthead-inner">
-        <p class="eyebrow">Purchase confirmed</p>
-        <h1>Thank you for your purchase</h1>
-        <p class="lead">Your payment for the Construction Bid Proposal Deck was successful.</p>
-      </div>
-    </header>
+    <div id="state-success">
+      <header class="masthead">
+        <div class="masthead-inner">
+          <p class="eyebrow">Purchase confirmed</p>
+          <h1>Thank you for your purchase</h1>
+          <p class="lead">Your payment for the Construction Bid Proposal Deck was successful.</p>
+        </div>
+      </header>
 
-    <aside class="notice success" role="status">
-      <strong>Payment received</strong>
-      <p>This page confirms your purchase. It is not a checkout page, and it has no payment link.</p>
-    </aside>
+      <aside class="notice success" role="status">
+        <strong>Payment received</strong>
+        <p>This page confirms your purchase. It is not a checkout page, and it has no payment link.</p>
+      </aside>
 
-    <main>
-      <section>
-        <h2>What happens next<span class="rule" aria-hidden="true"></span></h2>
-        <p class="prose">The editable PowerPoint file will be sent with your purchase receipt and delivery email. You can open it in Microsoft PowerPoint, or upload it to Google Drive and open it with Google Slides.</p>
-        <p class="prose">If the file does not arrive, reply to your purchase receipt and we will resend it.</p>
-      </section>
-    </main>
+      <main>
+        <section>
+          <h2>What happens next<span class="rule" aria-hidden="true"></span></h2>
+          <p class="prose">The editable PowerPoint file will be sent with your purchase receipt and delivery email. You can open it in Microsoft PowerPoint, or upload it to Google Drive and open it with Google Slides.</p>
+          <p class="prose">If the file does not arrive, reply to your purchase receipt and we will resend it.</p>
+        </section>
+      </main>
+    </div>
+
+    <div id="state-cancelled" hidden>
+      <header class="masthead">
+        <div class="masthead-inner">
+          <p class="eyebrow">Payment cancelled</p>
+          <h1>Your payment was cancelled</h1>
+          <p class="lead">No purchase was completed, and you have not been charged for this order.</p>
+        </div>
+      </header>
+
+      <aside class="notice cancel" role="status">
+        <strong>Checkout was cancelled</strong>
+        <p>This page has no payment link. You can close it, or come back to the product page later if you still want the deck.</p>
+      </aside>
+    </div>
 
     <footer class="site-footer">
       <p>Construction Bid Proposal Deck</p>
-      <p>Purchase confirmation only</p>
+      <p id="footer-note">Purchase confirmation only</p>
     </footer>
   </div>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var value = (params.get("cancelled") || "").toLowerCase();
+      if (value === "1" || value === "true" || value === "yes") {
+        var success = document.getElementById("state-success");
+        var cancelled = document.getElementById("state-cancelled");
+        var footer = document.getElementById("footer-note");
+        if (success) success.hidden = true;
+        if (cancelled) cancelled.hidden = false;
+        if (footer) footer.textContent = "Payment cancelled";
+        document.title = "Payment cancelled — Construction Bid Proposal Deck";
+      }
+    })();
+  </script>
 </body>
 </html>
