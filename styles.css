@@ -358,3 +358,13 @@ h2 .rule {
     gap: 0.85rem 0.7rem;
   }
 }
+
+/* Purchase thank-you */
+.notice.success {
+  background: #eef3ee;
+  border-color: #c5d4c6;
+  color: var(--navy);
+}
+.notice.success strong {
+  color: var(--navy);
+}
